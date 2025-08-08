@@ -1,0 +1,194 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.ad-container {
+    width: 160px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.left-ad {
+    order: 1;
+}
+
+.right-ad {
+    order: 3;
+}
+
+.game-container {
+    flex: 1;
+    order: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.player-info {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.game-board {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #fff8e1;
+    border: 10px solid #5d4037;
+    border-radius: 10px;
+    position: relative;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%235d4037" opacity="0.1"/></svg>');
+    background-size: 50px 50px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.dice-btn {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.dice-btn:hover {
+    background-color: #388e3c;
+}
+
+.dice-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.dice-result {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.game-messages {
+    min-height: 50px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.leaderboard {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.leaderboard th {
+    background-color: #4caf50;
+    color: white;
+}
+
+.token {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.token:hover {
+    transform: scale(1.1);
+}
+
+.token-red { background-color: #f44336; }
+.token-blue { background-color: #2196f3; }
+.token-green { background-color: #4caf50; }
+.token-yellow { background-color: #ffeb3b; color: #333; }
+
+.home-area, .safe-spot, .finish-area {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.home-area {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255,255,255,0.7);
+    border: 3px dashed #999;
+}
+
+.safe-spot {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.9);
+    border: 2px solid #4caf50;
+}
+
+.finish-area {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.8);
+    border: 1px solid #ff9800;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .ad-container {
+        width: 100%;
+        order: 4 !important;
+        margin-top: 20px;
+    }
+    
+    .game-board {
+        height: 400px;
+    }
+}
